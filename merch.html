@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeBloom | Merch</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="CodeBloom Logo" class="logo-img">
+              CodeBloom
+            </a>
+          </div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">About Us</a>
+          <div class="dropdown-content">
+            <a href="about.html">Mission</a>
+            <a href="who.html">Team</a>
+          </div>
+        </li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
+          <div class="dropdown-content">
+            <a href="volunteer.html">Volunteer</a>
+            <a href="inquiries.html">Request a Program</a>
+          </div>
+        </li>
+      
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Cute with a cause ✨</h1>
+      <p>Every CodeBloom tee, tote, or sticker helps us bring tech education, community, and real opportunities to those historically excluded. You're not just getting something cute &mdash; you're building a more inclusive, empowering tech future for everyone. We love that for you!</p>
+      <a href="https://codebloom.printify.me" target="_blank" class="cta-button">View Full Store</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="products-container" class="merch-gallery"></section>
+
+    <section style="text-align: center; margin: 30px 0;">
+      <a href="https://codebloom.printify.me" target="_blank" class="cta-button">See More on Printify</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CodeBloom</p>
+  </footer>
+
+  <script>
+    const products = [
+      {
+        name: "Sticker!",
+        image: "https://images-api.printify.com/mockup/6878bc0a3c4ff4dbbd02d605/95743/79460/sticker-wname.jpg",
+        url: "https://codebloom.printify.me/product/21715647/sticker-wname"
+      },
+      {
+        name: "T-Shirt!",
+        image: "https://images-api.printify.com/mockup/68704fbb9b7d943861093265/12100/92570/t-shirt.jpg",
+        url: "https://codebloom.printify.me/product/21565927/t-shirt"
+      },
+      {
+        name: "Tote!",
+        image: "https://images-api.printify.com/mockup/68704d7aab91fa131b0cb158/71926/13780/tote-bag.jpg",
+        url: "https://codebloom.printify.me/product/21566369/tote-bag"
+      }
+    ];
+
+    const container = document.getElementById("products-container");
+
+    prod

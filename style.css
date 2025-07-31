@@ -1,0 +1,600 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7; /* Slightly increased for readability */
+    background-color: var(--background-body);
+    color: var(--text-dark);
+    font-size: 1.05rem; /* Slightly larger base font size */
+  }
+
+  /* Color Palette & Global Variables */
+  :root {
+    --primary: #ef6157ff; /* Cute Red-Orange */
+    --secondary: #e3b23cff; /* Lush Green */
+    --accent: #649157ff; /* Sunny Yellow */
+    --other-light-blue: #a4b8c4ff; /* Gentle Blue-Gray */
+    --other-pink: #e3b2c3ff; /* Soft Pink */
+    --background-body: #fcfafaff; /* Very Light Off-white */
+
+    --text-dark: #2d3142; /* Darker charcoal for main text */
+    --text-light: #5a5f73; /* Softer gray for secondary text */
+    --background-light: #ffffff; /* Pure white for sections */
+    --border-color: #e0e0e0; /* Light gray for borders */
+    --radius: 10px; /* Consistent border radius, slightly larger */
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Modern subtle shadow */
+    --transition-speed: 0.3s ease; /* For smooth transitions */
+
+    /* New variables for consistency with cute theme */
+    --dark-footer: #4a4a4a; /* Darker gray for footer */
+  }
+
+  /* --- Header & Navbar --- */
+header.hero {
+    background-color: var(--background-light);
+    /* padding: 2.5rem 1rem; */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures all items are vertically centered */
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    /* Ensure the logo container itself uses flex to center its link content */
+    display: flex;
+    align-items: center; /* Vertically centers the <a> tag within .logo */
+    height: 100%; /* Ensure .logo div takes up available height for centering */
+  }
+  
+  .logo a {
+    text-decoration: none; /* Remove underline from the logo link */
+    color: var(--primary); /* Keep the text color consistent with logo style */
+    display: flex; /* Make the link a flex container for its image and text */
+    align-items: center; /* Vertically centers the image and text within the link */
+    /* Remove any default padding/margin that might interfere with alignment */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .logo-img {
+    height: 2.2rem; /* Adjust height to match or slightly exceed font-size of CodeBloom text */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Space between logo and text */
+    /* Remove vertical-align as flexbox handles alignment */
+  }
+  
+  .hamburger {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+    color: var(--text-dark);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center; /* Add this to align all direct children (<li>) */
+  }
+  
+  .nav-links li {
+      /* Ensure list items don't have extra padding/margins messing up alignment */
+      margin: 0;
+      padding: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0; /* Consistent vertical padding */
+    position: relative;
+    display: inline-block; /* Ensure links behave well with padding */
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-speed);
+  }
+  
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--primary);
+  }
+  
+  /* --- Dropdown Navigation Styling --- */
+  /* --- Dropdown Navigation Styling --- */
+.navbar .nav-links .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .nav-links .dropbtn {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    /* Add more horizontal padding here to increase hover area if needed */
+    padding: 0.5rem 1rem; /* Example: Added more horizontal padding */
+  }
+  
+  /* Ensure dropdown buttons also get hover styles */
+  .navbar .nav-links .dropbtn:hover {
+    color: var(--primary);
+  }
+  
+  /* Underline for dropdown buttons on hover */
+  .navbar .nav-links .dropbtn::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width var(--transition-speed);
+  }
+  
+  .navbar .nav-links .dropbtn:hover::after,
+  .navbar .nav-links .dropbtn.active::after {
+      width: 100%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-light);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: var(--radius);
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 0;
+    top: 100%; /* Position right below the dropdown button */
+    /* --- IMPORTANT CHANGE HERE --- */
+    margin-top: 0; /* Remove any gap between the button and the dropdown content */
+    padding-top: 5px; /* Add this padding to the TOP of the dropdown content itself */
+    /* This effectively moves the hover area of the dropdown content slightly up
+       to overlap the bottom of the button, making the transition seamless. */
+  }
+  
+  .dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-weight: 400;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--border-color);
+    color: var(--primary);
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* --- Responsive Adjustments for Dropdown --- */
+  @media (max-width: 768px) {
+    /* ... (keep existing mobile styles, ensure margin-top: 0 and padding-top: 0 for dropdown-content here) ... */
+    .dropdown-content {
+      margin-top: 0; /* Important for mobile to avoid gap */
+      padding-top: 0; /* Remove top padding on mobile, as items stack */
+      /* ... rest of your mobile dropdown-content styles ... */
+    }
+  
+    .navbar .nav-links {
+      align-items: flex-start; /* Reset for stacking in mobile */
+    }
+  
+    .navbar .nav-links .dropdown {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+      /* Ensure the dropdown button itself is centered */
+      justify-content: center; /* Center the dropbtn within the dropdown li */
+    }
+  
+    .navbar .nav-links .dropbtn {
+      padding: 0.8rem 0; /* Match other mobile nav items */
+    }
+  
+    .navbar .nav-links .dropbtn::after {
+        display: none;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      width: 100%;
+      border-radius: 0;
+      padding: 0;
+      margin-top: 0; /* Remove gap in mobile */
+      border-top: none; /* Remove duplicate border if parent li has one */
+    }
+  
+    .dropdown-content a {
+      padding: 0.8rem 0;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.95rem;
+      background-color: var(--background-light);
+    }
+  
+    .dropdown-content a:hover {
+      background-color: var(--other-light-blue);
+      color: var(--background-body);
+    }
+  
+    .nav-links.show .dropdown-content {
+      display: block;
+    }
+  }
+
+
+  /* --- Hero Content --- */
+  .hero-content {
+    padding: 3rem 1rem; /* More vertical padding */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.5rem; /* Larger, more impactful heading */
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    margin-top: 1.5rem;
+    font-size: 1.25rem; /* Larger tagline */
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 1.5rem auto 2rem auto;
+  }
+
+  .cta-button {
+    margin-top: 2rem; /* More space above button */
+    display: inline-block;
+    padding: 1rem 2.2rem; /* Larger button */
+    background-color: var(--secondary); /* New button color */
+    color: #fff;
+    border: none;
+    border-radius: var(--radius); /* Consistent border-radius */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color var(--transition-speed), transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-button:hover {
+    background-color: var(--primary); /* Hover color change */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1rem; /* Ample padding */
+    background-color: var(--background-light); /* Light background for section */
+    border-radius: var(--radius);
+    margin-bottom: 3rem; /* Spacing below section */
+  }
+  .cta-section h2 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  /* --- Main Content Sections --- */
+  main {
+    padding: 3rem 1rem; /* More padding for main content */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin-bottom: 4rem; /* More space between sections */
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem; /* Consistent heading size */
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    color: var(--text-dark);
+  }
+
+  ul {
+    list-style: none; /* Removed default disc style */
+    padding-left: 0; /* Remove default padding */
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 1.5rem; /* Space for custom bullet */
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  ul li::before { /* Custom bullet point */
+    /* content: '⭐'; A cute star bullet */
+    position: absolute;
+    left: 0;
+    color: var(--accent); /* Use accent color for bullets */
+    font-size: 0.9em;
+    line-height: 1; /* Align with text */
+  }
+
+  /* --- Collage Section --- */
+  .collage-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .collage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Simplified grid areas for a cleaner, more adaptable layout */
+    gap: 2.5rem; /* Increased gap */
+  }
+
+  .tile {
+    padding: 2.5rem; /* More padding inside tiles */
+    background: var(--background-body);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow); /* Consistent shadow */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0; /* Keep animation */
+    transform: translateY(30px); /* Keep animation */
+    animation: fadeInUp 0.8s ease forwards;
+    border: 1px solid var(--border-color); /* Subtle border for definition */
+  }
+
+  .tile h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align tile headings to left */
+    color: var(--primary);
+  }
+
+  .tile p,
+  .tile li {
+    color: var(--text-light);
+  }
+
+  /* No rotations for a cleaner look */
+  .mission {
+    border-left: 6px solid var(--primary);
+  }
+  .vision {
+    border-left: 6px solid var(--secondary);
+  }
+  .problem {
+    border-left: 6px solid var(--accent);
+  }
+  .solution {
+    border-left: 6px solid var(--primary);
+  }
+
+  /* Animation Delays (Keep these for staggered effect) */
+  .tile:nth-child(1) { animation-delay: 0.2s; }
+  .tile:nth-child(2) { animation-delay: 0.4s; }
+  .tile:nth-child(3) { animation-delay: 0.6s; }
+  .tile:nth-child(4) { animation-delay: 0.8s; }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .tile:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* More shadow on hover */
+  }
+
+  /* --- Program Grid --- */
+  .program-preview h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 2rem; /* Increased gap */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Slightly wider min width */
+  }
+
+  .program-card {
+    background-color: var(--background-light);
+    padding: 1.8rem; /* More padding */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center; /* Center content in cards */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid var(--border-color);
+  }
+
+  .program-card h3 {
+    color: var(--primary);
+    font-size: 1.4rem; /* Slightly larger heading */
+    margin-bottom: 0.8rem;
+    font-family: 'Inter', sans-serif; /* Keep Inter for program headings */
+    font-weight: 600;
+  }
+
+  .program-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  /* --- Footer --- */
+  .footer {
+    text-align: center;
+    padding: 1.5rem; /* More padding */
+    background-color: var(--dark-footer); /* Darker footer for contrast */
+    color: #cccccc; /* Lighter text for contrast */
+    font-size: 0.95rem;
+  }
+
+  /* --- Inquiries Page (Form) --- */
+  .form-page {
+    max-width: 700px; /* Wider form area */
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .form-page h1 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .form-page p {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.15rem;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1rem;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 0.9rem; /* More padding */
+    margin-bottom: 1.8rem; /* More space between fields */
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  }
+
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(239, 97, 87, 0.2); /* Focus ring using primary color */
+  }
+
+  form button.cta-button {
+    width: 100%;
+    font-size: 1.2rem; /* Larger submit button */
+    padding: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+  }
+
+  .appointment-booking {
+    margin-top: 4rem; /* More space above appointment section */
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--border-color); /* Subtle separator */
+  }
+
+  .appointment-booking h2 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+  }
+
+  .appointment-booking p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+  }
+
+  .appointment-booking a.cta-button {
+    background-color: var(--primary); /* Primary color for this button */
+  }
+
+  .appointment-booking a.cta-button:hover {
+    background-color: var(--secondary);
+    color: #fff; /* Keep white text for good contrast */
+  }
+
+  /* --- Merch Page --- */
+  .merch-page {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .merch-page h1 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 2.5rem;
+  }
+
+  .merch-page p {
+    colo

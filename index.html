@@ -3,68 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CodeBloom – Hands-on coding with minimal screens." />
   <title>CodeBloom</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">CodeBloom</h1>
-      <nav id="navbar">
-        <ul class="nav-links">
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#join">Join Us</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-      </nav>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="CodeBloom Logo" class="logo-img">
+              CodeBloom
+            </a>
+          </div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">About Us</a>
+          <div class="dropdown-content">
+            <a href="about.html">Mission</a>
+            <a href="who.html">Team</a>
+          </div>
+        </li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
+          <div class="dropdown-content">
+            <a href="volunteer.html">Volunteer</a>
+            <a href="inquiries.html">Request a Program</a>
+          </div>
+        </li>
+      
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Planting skills, growing careers</h1>
+      <p>Hands-on coding for real-world impact. Igniting passion for Grades 3 through College.</p>
+      <a href="#programs" class="cta-button">Explore Programs</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Growing Coders Beyond the Screen</h2>
-      <p>Learn-to-code courses for grades 3–12 and college students — 75% hands-on, offline learning.</p>
-      <a class="cta" href="#programs">Explore Our Programs</a>
-    </div>
-  </section>
+  <main>
+    <section class="collage-section">
+        <div class="tile mission">
+            <h2>Our Mission:</h2>
+            <p>
+                To democratize access to tech for underserved and underrepresented communities, empowering them through coding education, seamless transition support, and a vibrant, lifelong community that supports well-rounded, impactful tech leaders.
+            </p>
+          </div>
+          <br></br>
 
-  <section id="programs" class="section">
-    <div class="container">
-      <h3>Our Programs</h3>
-      <div class="program-grid">
-        <div class="card">Grades 3–5: Coding through play and games.</div>
-        <div class="card">Grades 6–8: Build, explore, and create together.</div>
-        <div class="card">High School: Real-world projects and leadership.</div>
-        <div class="card">College: Peer mentorship and teaching fellowships.</div>
+      <!-- <div class="collage-grid"> -->
+
+        <div class="tile vision">
+          <h2>Our Vision: </h2>
+          <h3>A Flourishing Tech Ecosystem</h3>
+          <p>
+            Imagine a world where every seed of talent, regardless of where it's planted, has the chance to grow into a mighty oak in the tech forest. Our vision is to cultivate an inclusive digital garden, where diverse perspectives blossom, innovation thrives, and every individual is empowered to contribute their unique foliage to the landscape of technology. We envision a future where the tech industry mirrors the vibrant biodiversity of nature, rich with a variety of backgrounds, ideas, and leaders, all rooted in strong community and equitable opportunity.</p>
+        </div>
+        <br></br>
+        <div class="tile problem">
+          <h2>The Challenge</h2>
+          <h3>Barren Ground & Stifled Growth</h3>
+          <p>
+            Even in today's interconnected world, fertile ground for tech growth isn't equally distributed. We face significant challenges that prevent countless bright minds from flourishing in the digital realm:
+            <ul>
+            <li>Systemic Barriers to Cultivation: There's an undeniable lack of early exposure and quality tech education in many communities, acting like a drought that prevents young seedlings from even sprouting. This systemic barrier often dictates who gets to plant their roots in tech and who doesn't.</li>
+
+            <li>Monoculture Risks Innovation: When the tech landscape lacks diversity, it becomes a monoculture—less resilient and prone to stagnation. A homogeneous developer and leadership base stifles innovative breakthroughs and perpetuates the digital divide, creating an ecosystem that isn't truly representative or adaptable.</li>
+
+            <li>A Fractured Pipeline: We see a critical pipeline problem, where unequal access to foundational tech education and supportive communities creates gaps in the journey from aspiring coder to impactful leader. This fragmentation means many potential leaders never find their way to the light.</li>
+
+            <li>Outmoded Community Structures: Many existing tech communities are like overgrown, traditional gardens, primarily designed for established flora and inadvertently excluding the vibrant new growth of younger, emerging talent.</li>
+
+            <li>Disconnected Branches: There's often a disconnect between specialized tech professionals (like software engineers and data analysts) and other vital professionals (such as researchers and educators) who critically utilize code. This fragmentation limits the cross-pollination of ideas and comprehensive problem-solving.</li>
+        </ul>
+        </p>
+        </div>
+        <br></br>
+        <div class="tile solution">
+          <h2>Our Approach</h2>
+          <h3>Nurturing Growth & Cultivating Community</h3>
+          <ul>
+            <li>Our strategy is to act as dedicated gardeners, providing the right soil, water, and sunlight to help every individual thrive and contribute to a more vibrant tech future:
+
+            <li>Watering Seeds of Access: We are committed to directing our programs and resources specifically towards underserved and underrepresented communities, ensuring that quality tech education reaches those who need it most. To foster this equitable growth, we will utilize resources generated from programs in higher socioeconomic communities to directly fund initiatives and educational opportunities in lower socioeconomic communities, creating a sustainable cycle of support.</li>
+                
+                <li>Enriching the Soil of Diversity: To tackle the issue of reduced diversity, we're building a rich, fertile environment for all. Through engaging guest speakers and strategic third-party partnerships, we aim to provide powerful reflections for our students. They'll see and interact with tech professionals who share their backgrounds, look like them, and even share their faith, helping them vividly imagine themselves in a thriving tech career. This direct exposure is key to encouraging and empowering students from underrepresented communities to pursue and excel in tech.</li>
+                
+                <li>Cultivating a Strong Pipeline: We're designing comprehensive coding education programs that act as robust root systems, providing seamless transitions from foundational learning to advanced skills. This includes mentorship and practical experience to ensure sustained growth.</li>
+                
+                <li>Building a Welcoming Grove: We're creating a vibrant, lifelong community that’s open and inviting to all. This grove will support not just technical skills but also the development of well-rounded, impactful tech leaders, fostering connections across all career stages and backgrounds.</li>
+                
+                <li>Bridging the Branches: Our approach encourages interdisciplinary collaboration, connecting tech professionals with other code-using fields. By fostering this cross-pollination, we aim to solve complex problems more creatively and holistically, enriching the entire tech ecosystem.</li>
+
+            </ul>
+        </div>
+      <!-- </div> -->
+    </section>
+
+    <section id="programs" class="program-preview">
+      <h2>Programs Designed for Every Stage</h2>
+      <div class="grid">
+        <div class="program-card">
+          <h3>Grades 3–5: Spark Curiosity</h3>
+          <p>Engage with story games, unplugged logic challenges, and collaborative team robotics.</p>
+        </div>
+        <div class="program-card">
+          <h3>Grades 6–8: Build Foundations</h3>
+          <p>Dive into coding puzzles, beginner robotics, and core algorithmic thinking.</p>
+        </div>
+        <div class="program-card">
+          <h3>Grades 9–12: Innovate & Create</h3>
+          <p>Learn to build circuits, automate systems, and develop an engineer's mindset.</p>
+        </div>
+        <div class="program-card">
+          <h3>College: Lead & Connect</h3>
+          <p>Participate in project-based, peer-led, and community-driven labs for advanced learning.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="impact" class="section light-bg">
-    <div class="container">
-      <h3>Our Impact</h3>
-      <ul class="impact-list">
-        <li>🌿 2,000+ students taught</li>
-        <li>📵 75% screen-free time</li>
-        <li>🌍 6 cities, 12 campuses</li>
-        <li>🤝 In-person alumni events every 6 months</li>
-      </ul>
-    </div>
-  </section>
+    <section class="cta-section">
+      <h2>Bring CodeBloom to Your Community</h2>
+      <div class="cta-button-wrapper">
+        <a href="inquiries.html" class="cta-button">Request a Program</a>
+      </div>
+    </section>
+  </main>
 
-  <section id="join" class="section dark-bg">
-    <div class="container center-text">
-      <h3>Join Us</h3>
-      <p>Whether you’re a student, volunteer, or donor — you can grow with CodeBloom.</p>
-      <a class="cta-alt" href="#">Get Involved</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 CodeBloom. All rights reserved.</p>
-    </div>
+  <footer class="footer">
+    <p>&copy; 2025 CodeBloom</p>
   </footer>
 
   <script src="script.js"></script>

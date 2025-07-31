@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | CodeBloom</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="CodeBloom Logo" class="logo-img">
+              CodeBloom
+            </a>
+          </div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">About Us</a>
+          <div class="dropdown-content">
+            <a href="about.html">Mission</a>
+            <a href="who.html">Team</a>
+          </div>
+        </li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
+          <div class="dropdown-content">
+            <a href="volunteer.html">Volunteer</a>
+            <a href="inquiries.html">Request a Program</a>
+          </div>
+        </li>
+      
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Who We Are</h1>
+      <p>At CodeBloom, we believe tech should be for everyone. Our mission is to democratize access to tech for underserved and underrepresented communities &mdash; through hands-on coding education, seamless career transitions, and a vibrant community built to last.</p>
+      <p>We’re here to break barriers, open doors, and make space for new voices in tech &mdash; not just for now, but for the long run. 🌱💻</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="team-section">
+      <h2>Meet the dreamers behind the mission</h2>
+      <p>We're a group of educators, technologists, and community-builders who care deeply about equity, access, and impact. Scroll on to meet the humans making CodeBloom bloom.</p>
+
+      <div id="team-container" class="team-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CodeBloom</p>
+  </footer>
+
+  <script>
+    const teamMembers = [
+      {
+        name: "Sam Mosley",
+        image: "https://media.licdn.com/dms/image/v2/D4E03AQFzbESczoo45g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1691453763170?e=2147483647&v=beta&t=d4eUK32mwP3lI8OWmQkFdeSfg6oSCWHyrI82unf1HqM",
+        title: "Founder",
+        text: "Sam started CodeBloom with one big belief: that tech should feel like home &mdash; not a gated community. Born and raised in Maryland, Sam saw firsthand how many brilliant minds are left out of tech simply because they didn’t have the access or support to get in. CodeBloom is their way of changing that! With a heart for education, a mind for tech, and a passion for building community, Sam’s vision is clear: a more inclusive, empowered, and radically welcoming tech world &mdash; for everyone."
+      },
+      {
+        name: "Jody",
+        image: "https://via.placeholder.com/200/F0F0F0/808080?text=Jody+Photo", // Placeholder image
+        title: "Treasurer",
+        text: "Jody brings a keen eye for financial strategy and a passion for community development to CodeBloom. With a background in non-profit finance, Jody ensures our resources are managed effectively to maximize our impact and reach the communities who need us most. Their dedication keeps CodeBloom thriving and sustainable."
+      },
+      {
+        name: "Joanne",
+        image: "https://via.placeholder.com/200/F0F0F0/808080?text=Joanne+Photo", // Placeholder image
+        title: "Secretary",
+        text: "Joanne is the organizational heart of CodeBloom, ensuring smooth operations and clear communication across all our initiatives. Her meticulous attention to detail and commitment to our mission are invaluable in coordinating programs and maintaining strong connection

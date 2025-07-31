@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a CodeBloom program for your school or community and help us cultivate tech talent." />
+  <title>Request a Program | CodeBloom</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="CodeBloom Logo" class="logo-img">
+              CodeBloom
+            </a>
+          </div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <!-- <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Mission</a></li>
+        <li><a href="who.html">Team</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="inquiries.html" class="active">Request a Program</a></li> 
+        <li><a href="merch.html">Merch</a></li>
+      </ul> -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">About Us</a>
+          <div class="dropdown-content">
+            <a href="about.html">Mission</a>
+            <a href="who.html">Team</a>
+          </div>
+        </li>
+      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
+          <div class="dropdown-content">
+            <a href="volunteer.html">Volunteer</a>
+            <a href="inquiries.html">Request a Program</a>
+          </div>
+        </li>
+      
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Let's Plant a Program Together!</h1>
+    </div>
+  </header>
+
+  <main class="form-page" id="programRequestForm">
+    <p>Fill out the form below to initiate a program for your school or organization, or to simply inquire about how we can best serve your community's needs. We're excited to grow with you!</p>
+
+    <form id="requestForm" action="https://formsubmit.co/programs@codebloominitiative.org" method="POST">
+      <label for="name">Your Full Name</label>
+      <input type="text" id="name" name="name" placeholder="First and last name" required />
+
+      <label for="email">Your Email Address</label>
+      <input type="email" id="email" name="email" placeholder="name@example.com" required />
+
+      <label for="phone">Phone Number (Optional)</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g., (123) 456-7890" />
+
+      <label for="organization">Organization / School Name</label>
+      <input type="text" id="organization" name="organization" placeholder="Name of your school or organization" required />
+
+      <label for="organizationType">Type of Organization/School</label>
+      <select id="organizationType" name="organizationType" required>
+        <option value="">Please select...</option>
+        <option value="elementary">Elementary School</option>
+        <option value="middle">Middle School</option>
+        <option value="high">High School</option>
+        <option value="college">College/University</option>
+        <option value="nonprofit">Non-Profit Organization</option>
+        <option value="communityCenter">Community Center</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="targetAudience">Target Age Group / Grades</label>
+      <input type="text" id="targetAudience" name="targetAudience" placeholder="e.g., Grades 6-8, High School Students, All Ages" required />
+
+      <label for="programDetails">Tell Us About Your Program Vision</label>
+      <textarea id="programDetails" name="programDetails" rows="7" placeholder="Describe the type of program you're interested in, any specific topics or goals you have, desired timeline, or any questions you might have."></textarea>
+
+      <button type="submit" class="cta-button">Submit Program Request</button>
+    </form>
+
+    <div class="appointment-booking">
+      <h2>Or Prefer to Water Seeds in a Chat?</h2>
+      <p>Schedule a convenient time to directly discuss your program needs and vision with our team.</p>
+      <a href="https://calendar.app.google/irZLyR8V24GKVrbF9" target="_blank" rel="noopener" class="cta-button">Book a Discussion</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 CodeBloom</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
