@@ -79,4 +79,22 @@
 
     const container = document.getElementById("products-container");
 
-    prod
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "merch-card";
+      card.innerHTML = `
+        <h3>${product.name}</h3>
+        <a href="${product.url}" target="_blank">
+          <img src="${product.image}" alt="${product.name}" style="width: 250px;" />
+        </a>
+        <div style="text-align: center; margin-top: 10px;">
+          <a href="${product.url}" target="_blank" class="cta-button">Buy Now</a>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
