@@ -42,7 +42,7 @@
     <div class="hero-content">
       <h1>Who We Are</h1>
       <p>At CodeBloom, we believe tech should be for everyone. Our mission is to democratize access to tech for underserved and underrepresented communities &mdash; through hands-on coding education, seamless career transitions, and a vibrant community built to last.</p>
-      <p>We’re here to break barriers, open doors, and make space for new voices in tech &mdash; not just for now, but for the long run. 🌱💻</p>
+      <p>We’re here to break barriers, open doors, and make space for new voices in tech &mdash; not just for now, but for the long run.</p>
     </div>
   </header>
 
@@ -77,4 +77,25 @@
         name: "Joanne",
         image: "https://via.placeholder.com/200/F0F0F0/808080?text=Joanne+Photo", // Placeholder image
         title: "Secretary",
-        text: "Joanne is the organizational heart of CodeBloom, ensuring smooth operations and clear communication across all our initiatives. Her meticulous attention to detail and commitment to our mission are invaluable in coordinating programs and maintaining strong connection
+        text: "Joanne is the organizational heart of CodeBloom, ensuring smooth operations and clear communication across all our initiatives. Her meticulous attention to detail and commitment to our mission are invaluable in coordinating programs and maintaining strong connections within our growing community."
+      }
+    ];
+
+    const container = document.getElementById("team-container");
+
+    teamMembers.forEach(member => {
+      const card = document.createElement("div");
+      card.className = "team-member-card"; // Changed class name
+      card.innerHTML = `
+        <img src="${member.image}" alt="${member.name}" />
+        <h3>${member.name}</h3>
+        <p class="member-title">${member.title}</p>
+        <p>${member.text}</p>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
