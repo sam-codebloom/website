@@ -597,4 +597,325 @@ header.hero {
   }
 
   .merch-page p {
-    colo
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .merch-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptive columns */
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .merch-card {
+    background: var(--background-body);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem; /* More padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid var(--border-color);
+  }
+
+  .merch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .merch-card img {
+    width: 100%;
+    max-width: 250px; /* Constrain image width slightly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: var(--radius);
+    margin-bottom: 1.2rem;
+    object-fit: contain; /* Ensure image fits without cropping */
+    border: 1px solid var(--border-color); /* Subtle border on images */
+  }
+
+  .merch-card h3 {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .merch-card .cta-button {
+    padding: 0.7rem 1.4rem; /* Smaller button for cards */
+    font-size: 1rem;
+    margin-top: 1rem;
+    box-shadow: none; /* No shadow on internal buttons */
+  }
+  .merch-card .cta-button:hover {
+      box-shadow: none; /* No shadow on internal buttons */
+  }
+
+
+  /* --- Who We Are Page (Team) --- */
+  .team-section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .team-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+  }
+
+  .team-section p {
+      color: var(--text-light);
+      font-size: 1.15rem;
+      margin-bottom: 2.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem; /* Consistent gap */
+      padding: 1rem 0;
+  }
+
+  .team-member-card {
+      background: var(--background-body);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem; /* Ample padding */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+      border: 1px solid var(--border-color);
+  }
+
+  .team-member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .team-member-card img {
+      width: 160px; /* Size for team photos */
+      height: 160px;
+      border-radius: 50%; /* Circular images */
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--primary); /* A border that matches primary color */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-member-card h3 {
+      font-family: 'DM Serif Display', serif;
+      color: var(--text-dark);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .team-member-card .member-title { /* For the specific title like "Founder" */
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+  }
+
+  .team-member-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+  }
+
+  /* --- Responsive Navigation --- */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+      margin-top: 1rem;
+      background-color: var(--background-light); /* Background for mobile menu */
+      position: absolute;
+      left: 0;
+      top: 100%; /* Position below navbar */
+      border-top: 1px solid var(--border-color);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border-color); /* Separator for links */
+    }
+
+    .nav-links li:last-child {
+      border-bottom: none;
+    }
+
+    .nav-links a::after { /* No underline on mobile menu */
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-content h1 {
+      font-size: 2.8rem; /* Adjust for smaller screens */
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .tile {
+      padding: 2rem;
+    }
+    .merch-gallery,
+    .team-grid {
+      grid-template-columns: 1fr; /* Single column on smallest screens */
+    }
+    .program-card {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Optional styling for other pages if you create them without specific classes */
+  /* .form-page, .team-page, .merch-page already have specific styles */
+
+
+
+
+  /* --- Dropdown Navigation Styling --- */
+.navbar .nav-links .dropdown {
+    position: relative;
+    display: inline-block; /* Allows side-by-side with other nav items */
+  }
+  
+  .navbar .nav-links .dropbtn {
+    /* Inherits styles from .nav-links a, but ensures it's a block for clicking */
+    display: block;
+    padding: 0.5rem 0; /* Consistent padding */
+    text-decoration: none;
+    color: var(--text-dark); /* Default text color */
+    font-weight: 500;
+    cursor: pointer; /* Indicates it's clickable */
+    position: relative; /* For potential ::after effects */
+  }
+  
+  /* Ensure dropdown buttons also get hover styles */
+  .navbar .nav-links .dropbtn:hover {
+    color: var(--primary);
+  }
+  
+  /* Underline for dropdown buttons on hover */
+  .navbar .nav-links .dropbtn::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width var(--transition-speed);
+  }
+  
+  .navbar .nav-links .dropbtn:hover::after,
+  .navbar .nav-links .dropbtn.active::after { /* Add active state if needed */
+      width: 100%;
+  }
+  
+  
+  .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: var(--background-light); /* Or a slightly darker shade for contrast */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1; /* Ensures it appears above other content */
+    border-radius: var(--radius); /* Rounded corners for dropdown box */
+    overflow: hidden; /* Ensures child elements respect border-radius */
+    left: 50%; /* Center dropdown below button */
+    transform: translateX(-50%); /* Adjust to truly center */
+    padding: 0.5rem 0; /* Padding inside the dropdown */
+  }
+  
+  .dropdown-content a {
+    color: var(--text-dark); /* Color for dropdown links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Make links take full width */
+    text-align: center; /* Center text within dropdown links */
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-weight: 400; /* Slightly lighter font for sub-items */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--border-color); /* Subtle highlight on hover */
+    color: var(--primary); /* Change text color on hover */
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* --- Responsive Adjustments for Dropdown --- */
+  @media (max-width: 768px) {
+    .navbar .nav-links .dropdown {
+      width: 100%; /* Make dropdown take full width in mobile menu */
+      text-align: center; /* Center the dropdown button text */
+      border-bottom: 1px solid var(--border-color); /* Separator for main dropdown items */
+    }
+  
+    /* No underline for dropdown main items in mobile menu */
+    .navbar .nav-links .dropbtn::after {
+        display: none;
+    }
+  
+    .dropdown-content {
+      position: static; /* Stack items vertically in mobile menu */
+      box-shadow: none; /* No shadow needed in stacked mobile menu */
+      width: 100%;
+      border-radius: 0;
+      padding: 0;
+    }
+  
+    .dropdown-content a {
+      padding: 0.8rem 0; /* Consistent padding for mobile sub-links */
+      border-top: 1px solid var(--border-color); /* Separator for sub-links */
+      font-size: 0.95rem; /* Slightly smaller font for sub-links */
+      background-color: var(--background-light); /* Ensure background for sub-links */
+    }
+  
+    /* Override hover for mobile, maybe a darker background */
+    .dropdown-content a:hover {
+      background-color: var(--other-light-blue); /* A light blue hover for mobile dropdown */
+      color: var(--background-body); /* White text on hover for contrast */
+    }
+  
+    /* Ensure the dropdown content is shown in mobile menu when parent is shown */
+    .nav-links.show .dropdown-content {
+      display: block; /* Show dropdown content when mobile menu is active */
+    }
+  }
