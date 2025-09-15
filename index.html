@@ -1,101 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CodeBloom – Hands-on coding with minimal screens." />
-  <title>CodeBloom</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>CodeBloom</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  </head>
 
 <body>
-  <header class="hero">
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">
-              <img src="logo.png" alt="CodeBloom Logo" class="logo-img">
-              CodeBloom
-            </a>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/codebloom2.png" width="75" height="75" alt="CodeBloom logo flower">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="#getinvolved">Get Involved</a></li> 
+                          <li><a href="events.html">Events</a></li>
+                          <li><a href="about-us.html">About Us</a></li>
+                          <li><a href="https://codebloom.printify.me/">Merch</a></li>
+                          <li><a href="mailto:board@codebloom.org">Contact Us</a></li> 
+                          <li><button style="background-color: #ef6157; color: white; border: white; border-radius: 12px;">
+                            <a href="https://www.paypal.com/donate/?hosted_button_id=PD9JR5MBV453E">Donate!</a>
+                          </button></li>
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
           </div>
-      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-      
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">About Us</a>
-          <div class="dropdown-content">
-            <a href="about.html">Mission</a>
-            <a href="who.html">Team</a>
-          </div>
-        </li>
-      
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
-          <div class="dropdown-content">
-            <a href="volunteer.html">Volunteer</a>
-            <a href="inquiries.html">Request a Program</a>
-          </div>
-        </li>
-      
-        <li><a href="merch.html">Merch</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h1>Planting skills, growing careers</h1>
-      <p>Hands-on coding for real-world impact. Igniting passion for Grades 3 through College.</p>
-    </div>
+      </div>
   </header>
+  <!-- ***** Header Area End ***** -->
 
-  <main>
-    <section class="collage-section">
-        <div class="tile mission">
-            <h2>Our Mission:</h2>
-            <p>
-                To democratize access to tech for underserved and underrepresented communities, empowering them through coding education, seamless transition support, and a vibrant, lifelong community that supports well-rounded, impactful tech leaders.
-            </p>
-          </div>
-          <br></br>
-
-      <!-- <div class="collage-grid"> -->
-    </section>
-
-    <section id="programs" class="program-preview">
-      <h2>Support CodeBloom!</h2>
-      <div class="grid">
-        <div class="program-card">
-          <h3>Bring it to your community!</h3>
-          <div class="cta-button-wrapper">
-            <a href="inquiries.html" class="cta-button">Request a Program</a>
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="header-text">
+            <h6>Welcome to our community</h6>
+            <h2>Increasing access to <em>Tech Education!</em></h2>
+            <div class="main-button-gradient">
+              <div class="scroll-to-section"><a href="#contact-section">Join Us Now!</a></div>
+            </div>
           </div>
         </div>
-        <div class="program-card">
-          <h3>Share your skills with us!</h3>
-          <div class="cta-button-wrapper">
-            <a href="volunteer.html" class="cta-button">Volunteer</a>
-          </div>
-        </div>
-        <div class="program-card">
-          <h3>Donate through merch!</h3>
-          <div class="cta-button-wrapper">
-            <a href="merch.html" class="cta-button">Merch</a>
-          </div>
-        </div>
-        <div class="program-card">
-          <h3>Want to learn more?</h3>
-          <div class="cta-button-wrapper">
-            <a href="about.html" class="cta-button">About</a>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <!-- <img src="assets/images/banner-right-image.png" alt=""> -->
+            <img src="assets/images/logo.png" alt="">
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
 
-  <footer class="footer">
-    <p>&copy; 2025 CodeBloom</p>
-  </footer>
+  <section class="services" id="focuses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h4>What we <em>focus</em> on</h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="assets/images/service-icon-01.png" alt="">
+                </div>
+                <h4>The Power of Play</h4>
+                <p>We believe many students already understand the core principles of coding through their everyday play. Our approach is to show them how their natural curiosity and problem-solving skills are the foundation of computer science, giving a new name to what they already know.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="assets/images/service-icon-02.png" alt="">
+                </div>
+                <h4>Noninvasive Community Action</h4>
+                <p>Our goal is to serve communities respectfully. We bring our courses, knowledge, and resources to underserved areas, providing support without overpowering or disrupting existing community structures.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="assets/images/service-icon-03.png" alt="">
+                </div>
+                <h4>Democratizing Access</h4>
+                <p>We are committed to tearing down the barriers to tech education. By providing resources and education to every individual, we ensure that a career in technology is accessible to individuals from every background, regardless of their circumstances.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="assets/images/service-icon-04.png" alt="">
+                </div>
+                <h4>Community Building, Online & In-Person</h4>
+                <p>We foster a supportive and vibrant community both online and in person. Our goal is to create a lifelong network that provides continuous support, mentorship, and opportunities for all of our members.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="assets/images/service-icon-03.png" alt="">
+                </div>
+                <h4>Well-Rounded Coursework</h4>
+                <p>Our curriculum is designed to give students a strong foundation in a wide variety of tech fields. Starting with our beginner course, students are prepared to pursue in-depth studies in a massive range of specializations, setting them up for a successful and impactful career.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section class="our-courses" id="curriculum">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h4><em>Pillars</em> of our Curriculum</h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>Play-Based Learning</span></div>
+                    <div class="gradient-border"><span>Collaborative Group Activities</span></div>
+                    <div class="gradient-border"><span>Physical Problem Solving</span></div>
+                    <div class="gradient-border"><span>Applied Python Challenges</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="left-image">
+                          <img src="assets/images/courses-01.jpg" alt="">
+                        </div>
+                        <div class="right-content">
+                          <h4>Play-Based Learning</h4>
+                          <p>We believe in the power of curiosity and exploration, and our curriculum is built around the idea that learning to code should be a fun, engaging experience. Instead of tedious lectures, we use interactive games and playful activities to introduce fundamental programming concepts in a way that feels natural and exciting. This approach helps students build a strong foundation in logic and problem-solving while nurturing a genuine passion for technology.</p>
+                          <br>
+                          <p>This teaching philosophy is rooted in the idea that play is a natural form of learning. By using games and puzzles, we show students that they already understand many of the core principles of coding, such as sequencing and problem-solving. We then provide the vocabulary and structure to turn their existing skills into powerful tools for building the future.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="assets/images/courses-02.jpg" alt="">
+                        </div>
+                        <div class="right-content">
+                          <h4>Collaborative Group Activities</h4>
+                          <p>Our courses emphasize teamwork and communication, as these are critical skills for any successful career in the tech industry. Through hands-on group projects, students learn to brainstorm ideas, divide tasks, and work together to solve complex problems in a real-world setting. These activities foster a strong sense of community and prepare students to collaborate effectively in any professional environment.</p>
+                          <br>
+                          <p>These group projects are designed to mimic the collaborative spirit of a professional development team. By working with their peers, students not only build their coding skills but also gain experience in project management, communication, and conflict resolution. This collaborative learning model ensures that our students are not just great coders, but also well-rounded, effective team members.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="assets/images/courses-03.jpg" alt="">
+                        </div>
+                        <div class="right-content">
+                          <h4>Physical Problem Solving</h4>
+                          <p>We bridge the gap between abstract concepts and tangible skills by incorporating physical, hands-on activities into our curriculum. Using creative, cut-and-paste exercises, students can physically manipulate code, creating algorithms and understanding their flow in a concrete way. This method makes complex ideas accessible and strengthens critical thinking through a unique, tactile experience that reinforces what they learn digitally.</p>
+                          <br>
+                          <p>These physical activities are essential for visual and kinesthetic learners. They allow students to slow down and literally touch the logic behind the code, helping them grasp complex ideas like loops and conditional statements. This powerful combination of physical and digital learning solidifies their understanding and builds confidence in their problem-solving abilities.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="assets/images/courses-04.jpg" alt="">
+                        </div>
+                        <div class="right-content">
+                          <h4>Applied Python Challenges</h4>
+                          <p>Our curriculum culminates in the practical application of knowledge through a series of increasingly complex Python challenges. These projects are designed to test and build on the skills learned in the early stages of our courses, helping students transition from foundational knowledge to practical application. These exercises build confidence and prepare them for future advanced courses and professional projects.</p>
+                          <br>
+                          <p>Each challenge is crafted to mimic real-world scenarios, giving students a sense of accomplishment as they solve genuine programming problems. From building simple games to creating small applications, students gain valuable experience that they can apply to their own projects and future careers. This hands-on, project-based approach ensures that our students are not just learning theory, but are also becoming confident and capable programmers.</p>
+                        </div>
+                      </div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1">
+          <div class="left-image">
+            <img src="assets/images/cta-left-image.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h6>Help build the community</h6>
+          <h4>Request a course in your area <em>today</em></h4>
+          <p>Fill out the form below to initiate a program for your school or organization, or to simply inquire about how we can best serve your community's needs. We're excited to grow with you!</p>
+          <div class="white-button">
+            <a href="https://forms.gle/x248jNpSwXaLiShF9">Request a Course</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="getinvolved">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Join the Movement</h6>
+            <h4>Ways to <em>Get Involved</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+                <iframe style='position:absolute;border:0;top:0;left:0;bottom:0;right:0;border-radius:15px;width:100%;height:100%' src='https://www.zeffy.com/en-US/embed/newsletter-form/request-a-program-in-your-community' allowTransparency="true"></iframe>
+            </div>
+            <!-- <div class="item">
+              <p>Ready to join a class?</p>
+              <div class="white-button">
+                <a href="https://forms.gle/x248jNpSwXaLiShF9">Course Calendar</a>
+              </div>
+            </div> -->
+            <div class="item">
+              <iframe style='position:absolute;border:0;top:0;left:0;bottom:0;right:0;border-radius:15px;width:100%;height:100%' src='https://www.zeffy.com/en-US/embed/newsletter-form/able-to-sponsor-a-course' allowTransparency="true"></iframe>
+            </div>
+            <div class="item" height="600px">
+              <iframe style='position:absolute;border:0;top:0;left:0;bottom:0;right:0;border-radius:15px;width:100%;height:100%' src='https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-1136' allowTransparency="true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
 </body>
+
 </html>
