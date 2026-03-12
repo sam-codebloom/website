@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CodeBloom - Summer Programs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+		<link rel="icon" href="images/logo.png" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><img src="images/logo.png" alt="CodeBloom" style="height: 2.2em; width: auto; vertical-align: middle; margin-right: 0.5em;"><strong>CodeBloom</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.facebook.com/profile.php?id=61584968176159" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/codebloomhq/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+										<li><a href="https://mastodon.social/@codebloom" class="icon brands fa-mastodon" target="_blank"><span class="label">Mastodon</span></a></li>
+										<li><a href="https://bsky.app/profile/codebloom.bsky.social" class="icon brands fa-bluesky" target="_blank"><span class="label">Bluesky</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Page Title -->
+							<section>
+								<header class="main">
+									<h1>2026 Summer Programs</h1>
+								</header>
+								<p>This summer, CodeBloom is bringing hands-on, play-based coding education to students in grades 3 through 12. Our programs are designed to be fun, engaging, and empowering, giving young people the tools and confidence to explore a future in tech! <strong>No prior coding experience required!</strong></p>
+								<p><em>All programs take place on weekdays only. <strong>Need-based fee waivers are available, no questions asked.</strong> Email <a href="mailto:board@codebloom.org">board@codebloom.org</a> to request one before registering.</em></p>
+							</section>
+
+						<!-- What to Expect -->
+							<section>
+								<header class="major">
+									<h2>What to Expect</h2>
+								</header>
+								<div class="features">
+									<article>
+										<span class="icon solid fa-laptop-code"></span>
+										<div class="content">
+											<h3>Hands-On Coding</h3>
+											<p>Students learn by doing, working through fun challenges and real projects using Python and other tools!</p>
+										</div>
+									</article>
+									<article>
+										<span class="icon solid fa-users"></span>
+										<div class="content">
+											<h3>Team Activities</h3>
+											<p>Collaborative group projects help students build communication and problem-solving skills alongside their peers in a supportive environment.</p>
+										</div>
+									</article>
+									<article>
+										<span class="icon solid fa-star"></span>
+										<div class="content">
+											<h3>Community &amp; Mentorship</h3>
+											<p>Participants connect with mentors and become part of the broader CodeBloom community, a network that supports them long after the program ends.</p>
+										</div>
+									</article>
+									<article>
+										<span class="icon solid fa-gamepad"></span>
+										<div class="content">
+											<h3>Play-Based Learning</h3>
+											<p>We use games, puzzles, and creative activities to show students that coding is something they already understand, we just give it a new name!</p>
+										</div>
+									</article>
+								</div>
+							</section>
+
+						<!-- Program Schedule -->
+							<section>
+								<header class="major">
+									<h2>2026 Program Schedule</h2>
+								</header>
+								<p>All programs run <strong>weekdays only</strong>. Some grade levels have multiple sessions available, pick the one that best fits your schedule! <br><br> Our programs run for 1 or 2 weeks. If you'd like a Summer Program at a different time, please contact board@codebloom.org </p>
+
+								<div style="margin-bottom: 1.5em;">
+									<a id="filter-all" class="button primary" href="#" onclick="filterPrograms('all'); return false;">All</a>
+									<a id="filter-elementary" class="button" href="#" onclick="filterPrograms('elementary'); return false;">Elementary</a>
+									<a id="filter-middle" class="button" href="#" onclick="filterPrograms('middle'); return false;">Middle School</a>
+									<a id="filter-high" class="button" href="#" onclick="filterPrograms('high'); return false;">High School</a>
+								</div>
+								<script>
+								function filterPrograms(level) {
+									document.querySelectorAll('.program-card').forEach(function(card) {
+										card.style.display = (level === 'all' || card.dataset.level === level) ? 'block' : 'none';
+									});
+									['all', 'elementary', 'middle', 'high'].forEach(function(l) {
+										document.getElementById('filter-' + l).classList.remove('primary');
+									});
+									document.getElementById('filter-' + level).classList.add('primary');
+								}
+								</script>
+
+								<style>
+									.program-card {
+										background: #f9f9f9;
+										border-left: 4px solid #6cc0e5;
+										border-radius: 6px;
+										padding: 1.5em 2em;
+										margin-bottom: 1.5em;
+									}
+									.program-card h3 {
+										margin-top: 0;
+										margin-bottom: 0.4em;
+										color: #3d4449;
+									}
+									.program-card .program-meta {
+										display: flex;
+										flex-wrap: wrap;
+										gap: 1.5em;
+										margin-bottom: 1em;
+										font-size: 0.95em;
+									}
+									.program-card .program-meta span {
+										display: flex;
+										align-items: center;
+										gap: 0.4em;
+									}
+									.program-card .price {
+										font-size: 1.3em;
+										font-weight: bold;
+										color: #6cc0e5;
+									}
+								</style>
+
+								<div class="program-card" data-level="elementary">
+									<h3>Elementary Program &mdash; Session 1</h3>
+									<div class="program-meta">
+										<span><i class="icon solid fa-user-graduate"></i> Grades 3&ndash;5</span>
+										<span><i class="icon solid fa-calendar"></i> July 6 &ndash; July 17, 2026</span>
+										<span><i class="icon solid fa-clock"></i> 9:00am &ndash; 12:00pm</span>
+										<span class="price">$100</span>
+									</div>
+									<ul class="actions">
+										<li><a href="https://www.paypal.com/ncp/payment/V34SSS8QKFDHJ" class="button primary" target="_blank">Register &amp; Pay $100</a></li>
+									</ul>
+								</div>
+
+								<div class="program-card" data-level="middle">
+									<h3>Middle School Program &mdash; Session 1</h3>
+									<div class="program-meta">
+										<span><i class="icon solid fa-user-graduate"></i> Grades 6&ndash;8</span>
+										<span><i class="icon solid fa-calendar"></i> July 6 &ndash; July 10, 2026</span>
+										<span><i class="icon solid fa-clock"></i> 1:00pm &ndash; 4:00pm</span>
+										<span class="price">$50</span>
+									</div>
+									<ul class="actions">
+										<li><a href="https://www.paypal.com/ncp/payment/JJXB85KYMDYTC" class="button primary" target="_blank">Register &amp; Pay $50</a></li>
+									</ul>
+								</div>
+
+								<div class="program-card" data-level="middle">
+									<h3>Middle School Program &mdash; Session 2</h3>
+									<div class="program-meta">
+										<span><i class="icon solid fa-user-graduate"></i> Grades 6&ndash;8</span>
+										<span><i class="icon solid fa-calendar"></i> July 13 &ndash; August 3, 2026</span>
+										<span><i class="icon solid fa-clock"></i> 1:00pm &ndash; 4:00pm</span>
+										<span class="price">$50</span>
+									</div>
+									<ul class="actions">
+										<li><a href="https://www.paypal.com/ncp/payment/NZDGKGW6ZSHC8" class="button primary" target="_blank">Register &amp; Pay $50</a></li>
+									</ul>
+								</div>
+
+								<div class="program-card" data-level="high">
+									<h3>High School Program</h3>
+									<div class="program-meta">
+										<span><i class="icon solid fa-user-graduate"></i> Grades 9&ndash;12</span>
+										<span><i class="icon solid fa-calendar"></i> July 30 &ndash; August 10, 2026</span>
+										<span><i class="icon solid fa-clock"></i> 9:00am &ndash; 12:00pm</span>
+										<span class="price">$75</span>
+									</div>
+									<ul class="actions">
+										<li><a href="https://www.paypal.com/ncp/payment/V2E4TJ5ZYZT6U" class="button primary" target="_blank">Register &amp; Pay $75</a></li>
+									</ul>
+								</div>
+
+								<div class="program-card" data-level="elementary">
+									<h3>Elementary Program &mdash; Session 2</h3>
+									<div class="program-meta">
+										<span><i class="icon solid fa-user-graduate"></i> Grades 3&ndash;5</span>
+										<span><i class="icon solid fa-calendar"></i> August 6 &ndash; August 10, 2026</span>
+										<span><i class="icon solid fa-clock"></i> 1:00pm &ndash; 4:00pm</span>
+										<span class="price">$50</span>
+									</div>
+									<ul class="actions">
+										<li><a href="https://www.paypal.com/ncp/payment/G6GGUBYGJNK96" class="button primary" target="_blank">Register &amp; Pay $50</a></li>
+									</ul>
+								</div>
+
+							</section>
+
+						<!-- How to Register -->
+							<section>
+								<header class="major">
+									<h2>How to Register</h2>
+								</header>
+								<ol>
+									<li>Click the <strong>Register &amp; Pay</strong> button for your program above.</li>
+									<li>Complete the PayPal checkout for the listed amount.</li>
+									<li>You will receive a confirmation email from CodeBloom once your registration is processed.</li>
+								</ol>
+								<div style="background: #f0f8ff; border-left: 4px solid #6cc0e5; border-radius: 6px; padding: 1.2em 1.5em; margin-top: 1.5em;">
+									<p style="margin: 0;"><strong>&#128161; Need a fee waiver?</strong> No problem! We will never let cost be a barrier. Email us at <a href="mailto:board@codebloom.org">board@codebloom.org</a> before registering and we will take care of you. No explanation needed.</p>
+								</div>
+							</section>
+
+					<!-- Ways to Get Involved -->
+							<section>
+								<header class="major">
+									<h2>Ways to Get Involved</h2>
+								</header>
+								<p>Interested in attending, volunteering, or sponsoring a summer program? Select an option below or reach out to us directly.</p>
+								<ul class="actions">
+									<li><a id="btn-request" class="button primary" href="#" onclick="switchInvolvedTab('request'); return false;">Request a Program</a></li>
+									<li><a id="btn-sponsor" class="button" href="#" onclick="switchInvolvedTab('sponsor'); return false;">Sponsor a Course</a></li>
+									<li><a id="btn-newsletter" class="button" href="#" onclick="switchInvolvedTab('newsletter'); return false;">Newsletter Sign-Up</a></li>
+									<li><a href="https://www.paypal.com/donate/?hosted_button_id=PD9JR5MBV453E" class="button" target="_blank">Donate!</a></li>
+								</ul>
+								<div id="tab-request" style="position: relative; height: 520px;">
+									<iframe style="position:absolute;border:0;top:0;left:0;bottom:0;right:0;border-radius:15px;width:100%;height:100%" src="https://www.zeffy.com/en-US/embed/newsletter-form/request-a-program-in-your-community" allowTransparency="true"></iframe>
+								</div>
+								<div id="tab-sponsor" style="position: relative; height: 520px; display: none;">
+									<iframe style="position:absolute;border:0;top:0;left:0;bottom:0;right:0;border-radius:15px;width:100%;height:100%" data-src="https://www.zeffy.com/en-US/embed/newsletter-form/able-to-sponsor-a-course" allowTransparency="true"></iframe>
+								</div>
+								<div id="tab-newsletter" style="position: relative; height: 520px; display: none;">
+									<iframe style="position:absolute;border:0;top:0;left:0;bottom:0;right:0;border-radius:15px;width:100%;height:100%" data-src="https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-1136" allowTransparency="true"></iframe>
+								</div>
+								<script>
+								function switchInvolvedTab(name) {
+									['request', 'sponsor', 'newsletter'].forEach(function(t) {
+										document.getElementById('tab-' + t).style.display = 'none';
+										document.getElementById('btn-' + t).classList.remove('primary');
+									});
+									var tab = document.getElementById('tab-' + name);
+									tab.style.display = 'block';
+									document.getElementById('btn-' + name).classList.add('primary');
+									var iframe = tab.querySelector('iframe');
+									if (iframe.dataset.src) {
+										iframe.src = iframe.dataset.src;
+										delete iframe.dataset.src;
+									}
+								}
+								</script>
+							</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="events.html">Events</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="summercamp.html">Summer Programs</a></li>
+										<li><a href="yep-grant.html">YEP! Grant</a></li>
+										<li><a href="https://codebloom.printify.me/" target="_blank">Merch</a></li>
+									</ul>
+								</nav>
+
+							<!-- Donate -->
+								<section>
+									<header class="major">
+										<h2>Support CodeBloom</h2>
+									</header>
+									<ul class="actions">
+										<li><a href="https://www.paypal.com/donate/?hosted_button_id=PD9JR5MBV453E" class="button primary" target="_blank">Donate!</a></li>
+									</ul>
+								</section>
+
+							<!-- Get in Touch -->
+								<section>
+									<header class="major">
+										<h2>Get in Touch</h2>
+									</header>
+									<p>Have questions or want to learn more about bringing CodeBloom to your community? Reach out to us!</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:board@codebloom.org">board@codebloom.org</a></li>
+										<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/profile.php?id=61584968176159" target="_blank">Facebook</a></li>
+										<li class="icon brands fa-instagram"><a href="https://www.instagram.com/codebloomhq/" target="_blank">Instagram</a></li>
+										<li class="icon brands fa-mastodon"><a href="https://mastodon.social/@codebloom" target="_blank">Mastodon</a></li>
+										<li class="icon brands fa-bluesky"><a href="https://bsky.app/profile/codebloom.bsky.social" target="_blank">Bluesky</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+
+								<div style="text-align: center; margin-top: 1.5em;">
+									<img src="images/logo.png" alt="CodeBloom" style="max-width: 120px; height: auto; display: block; margin: 0 auto;">
+								</div>
+								<footer id="footer">
+									<p class="copyright">&copy; CodeBloom. All rights reserved.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
