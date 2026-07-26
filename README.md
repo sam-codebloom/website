@@ -7,7 +7,6 @@ Source for [CodeBloom](https://codebloom.org)'s public website — a nonprofit d
 - `index.html` — Homepage: mission overview, curriculum pillars, and ways to get involved (request a program, sponsor a course, newsletter sign-up, donate)
 - `about.html` — About Us: mission and team members
 - `events.html` — Events
-- `summercamp.html` — Summer Programs: schedule and registration info
 - `yep-grant.html` — YEP! Grant award details
 
 ## Structure
